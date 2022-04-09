@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class DialogTranslateUser {
-    Scanner sc = new Scanner(System.in);
-    private int numWhile = -1;
-    Translate translates;
+    private Scanner sc = new Scanner(System.in);
+    private int criterion = -1;
+    private Translate translates;
 
     public DialogTranslateUser(Translate translate) {
         this.translates = translate;
@@ -14,7 +14,7 @@ public class DialogTranslateUser {
 
     public void dialogUserPat2() throws IOException {
 
-        while (numWhile == -1) {
+        while (criterion == -1) {
             System.out.println("Выберите действие: \n" +
                     "1. Просмотреть словарь\n" +
                     "2. Удаление запись\n" +
@@ -74,7 +74,7 @@ public class DialogTranslateUser {
                     }
                     break;
                 case 0:
-                    numWhile = 0;
+                    criterion = 0;
             }
 
         }

@@ -3,11 +3,11 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Dialog {
-    private int input0 = -1;
+    private int inputStart = -1;
 
     public void dialogUser() throws IOException {
         Scanner sc = new Scanner(System.in);
-        while (input0 == -1) {
+        while (inputStart == -1) {
             System.out.println("Здравствуйте, каким словарём Вы бы хотели воспользоваться?\n" +
                     "1. Цифро-русским\n" +
                     "2. Англо-русским\n" +
@@ -25,7 +25,7 @@ public class Dialog {
                     dialogEn.dialogUserPat2();
                     break;
                 case 0:
-                    input0 = 0;
+                    inputStart = 0;
             }
         }
     }
