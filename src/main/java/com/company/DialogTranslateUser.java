@@ -30,7 +30,7 @@ public class DialogTranslateUser {
                     System.out.println("Какую запись удалить? Введите слово:");
                     String str = new Scanner(System.in).nextLine();
                     if (translates.checkInput(translates, str)) {
-                        if (translates.adderMap().containsKey(str)) {
+                        if (translates.addInMap().containsKey(str)) {
                             translates.removes(str);
                         } else {
                             System.out.println("Вы ошиблись, такого слова в словаре нет");
@@ -45,7 +45,7 @@ public class DialogTranslateUser {
                     System.out.println("Что Вы хотели найти? Введите слово:");
                     String str1 = new Scanner(System.in).nextLine();
                     if (translates.checkInput(translates, str1)) {
-                        if (translates.adderMap().containsKey(str1)) {
+                        if (translates.addInMap().containsKey(str1)) {
                             translates.getWorld(str1);
                         } else {
                             System.out.println("Вы ошиблись, такого слова в словаре нет");
@@ -62,8 +62,8 @@ public class DialogTranslateUser {
                     System.out.println("Введите перевод: \n");
                     String str3 = new Scanner(System.in).nextLine();
                     if (translates.checkInput(translates, str2)) {
-                        if (!translates.adderMap().containsKey(str2)) {
-                            translates.adder(str2, str3);
+                        if (!translates.addInMap().containsKey(str2)) {
+                            translates.add(str2, str3);
                         } else {
                             System.out.println("Такое слово уже есть в словаре");
                             break;

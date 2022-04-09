@@ -27,7 +27,7 @@ public class Translate {
     }
 
 
-    public Map<String, String> adderMap() throws IOException {
+    public Map<String, String> addInMap() throws IOException {
         readBook();
         return translateMap;
     }
@@ -35,7 +35,7 @@ public class Translate {
 
     public void showFile() throws IOException {
         readFile();
-        System.out.println(adderMap());
+        System.out.println(addInMap());
     }
 
     public void readBook() throws IOException {
@@ -73,16 +73,16 @@ public class Translate {
     }
 
     public void removes(String str) throws IOException {
-        adderMap();
-        writerZero();
-        adderMap().remove(str);
-        Files.write(path, preparing(adderMap()));
+        addInMap();
+        writZero();
+        addInMap().remove(str);
+        Files.write(path, preparing(addInMap()));
     }
 
-    public void adder(String str1, String str2) throws IOException {
-        adderMap().put(str1, str2);
-        writerZero();
-        Files.write(path, preparing(adderMap()));
+    public void add(String str1, String str2) throws IOException {
+        addInMap().put(str1, str2);
+        writZero();
+        Files.write(path, preparing(addInMap()));
     }
 
     public List<String> preparing(Map<String, String> map) {
@@ -95,7 +95,7 @@ public class Translate {
         return listStr;
     }
 
-    public void writerZero() {
+    public void writZero() {
         try {
             FileWriter fileWriter = new FileWriter(dirPath);
             BufferedWriter out1 = new BufferedWriter(fileWriter);
@@ -107,8 +107,8 @@ public class Translate {
     }
 
     public void getWorld(String str) throws IOException {
-        adderMap();
-        System.out.println(adderMap().get(str));
+        addInMap();
+        System.out.println(addInMap().get(str));
     }
 }
 
