@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 
 public class Translate {
     private final String dirPath;
+    private boolean check = false;
     private final Path path;
     private Map<String, String> translateMap = new HashMap<>();
 
@@ -54,7 +55,7 @@ public class Translate {
     }
 
     public boolean checkInput(Translate digOrEnWorld, String str) {
-        boolean check = false;
+
         if (digOrEnWorld.dirPath.equals("src//main//resources//translateLatin.txt")) {
             Pattern pattern = Pattern.compile("[A-Za-z]{4}");
             Matcher matcher = pattern.matcher(str);
