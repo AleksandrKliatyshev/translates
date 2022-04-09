@@ -14,33 +14,33 @@ public class CheckAvailabilityTranslate {
         Translate translateLat = new Translate(DIRLAT);
         if (!Files.exists(Path.of(DIRDIG))) {
             Files.createFile(Path.of(DIRDIG));
-            translateDig.adder("55555", "Дом");
-            translateDig.adder("44444", "Дерево");
-            translateDig.adder("11111", "Дверь");
-            translateDig.adder("22222", "Нога");
-            translateDig.adder("33333", "Дорога");
+            translateDig.add("55555", "Дом");
+            translateDig.add("44444", "Дерево");
+            translateDig.add("11111", "Дверь");
+            translateDig.add("22222", "Нога");
+            translateDig.add("33333", "Дорога");
         }
         if(!Files.exists(Path.of(DIRLAT))){
             Files.createFile(Path.of(DIRLAT));
-            translateLat.adder("home", "Дом");
-            translateLat.adder("tree", "Дерево");
-            translateLat.adder("door", "Дверь");
-            translateLat.adder("foot", "Нога");
-            translateLat.adder("rose", "Роза");
+            translateLat.add("home", "Дом");
+            translateLat.add("tree", "Дерево");
+            translateLat.add("door", "Дверь");
+            translateLat.add("foot", "Нога");
+            translateLat.add("rose", "Роза");
         }
         if(Files.size(Path.of(DIRDIG)) == 0 ){
-            translateDig.adder("55555", "Дом");
-            translateDig.adder("44444", "Дерево");
-            translateDig.adder("11111", "Дверь");
-            translateDig.adder("22222", "Нога");
-            translateDig.adder("33333", "Дорога");
+            translateDig.add("55555", "Дом");
+            translateDig.add("44444", "Дерево");
+            translateDig.add("11111", "Дверь");
+            translateDig.add("22222", "Нога");
+            translateDig.add("33333", "Дорога");
         }
         if(Files.size(Path.of(DIRLAT)) == 0 ){
-            translateLat.adder("home", "Дом");
-            translateLat.adder("tree", "Дерево");
-            translateLat.adder("door", "Дверь");
-            translateLat.adder("foot", "Нога");
-            translateLat.adder("rose", "Роза");
+            translateLat.add("home", "Дом");
+            translateLat.add("tree", "Дерево");
+            translateLat.add("door", "Дверь");
+            translateLat.add("foot", "Нога");
+            translateLat.add("rose", "Роза");
         }
     }
 }
