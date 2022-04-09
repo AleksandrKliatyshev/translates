@@ -17,12 +17,12 @@ public class Dialog {
                 case 1:
                     Translate digRu = new Translate("src//main//resources//translateDigital.txt");
                     DialogTranslateUser dialogDig = new DialogTranslateUser(digRu);
-                    dialogDig.dialogUserPat2();
+                    dialogDig.dialogUserPatTow();
                     break;
                 case 2:
                     Translate enRu = new Translate("src//main//resources//translateLatin.txt");
                     DialogTranslateUser dialogEn = new DialogTranslateUser(enRu);
-                    dialogEn.dialogUserPat2();
+                    dialogEn.dialogUserPatTow();
                     break;
                 case 0:
                     inputStart = 0;
