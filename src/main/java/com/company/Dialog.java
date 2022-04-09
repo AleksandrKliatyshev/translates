@@ -1,5 +1,4 @@
 package com.company;
-
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -16,12 +15,12 @@ public class Dialog {
             int inputNumber = sc.nextInt();
             switch (inputNumber) {
                 case 1:
-                    Translate digRu = new Translate("Resources\\translateDigital.txt");
+                    Translate digRu = new Translate("src//main//resources//translateDigital.txt");
                     DialogTranslateUser dialogDig = new DialogTranslateUser(digRu);
                     dialogDig.dialogUserPat2();
                     break;
                 case 2:
-                    Translate enRu = new Translate("Resources\\translateLatin.txt");
+                    Translate enRu = new Translate("src//main//resources//translateLatin.txt");
                     DialogTranslateUser dialogEn = new DialogTranslateUser(enRu);
                     dialogEn.dialogUserPat2();
                     break;
