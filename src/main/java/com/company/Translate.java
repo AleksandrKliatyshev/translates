@@ -28,7 +28,6 @@ public class Translate {
 
     public Map<String, String> adderMap() throws IOException {
         readBook();
-//        System.out.println(translateMap);
         return translateMap;
     }
 
@@ -82,7 +81,6 @@ public class Translate {
     public void adder(String str1, String str2) throws IOException {
         adderMap().put(str1, str2);
         writerZero();
-        //iterator(adderMap());
         Files.write(path, preparing(adderMap()));
     }
 
